@@ -2,6 +2,7 @@ package com.lekmiti.reativewebfluxlab;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Tolerate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,4 +16,8 @@ public class Book {
     private String author;
     private int year;
     private float cost;
+
+    @Tolerate
+    public Book() {
+    }
 }
